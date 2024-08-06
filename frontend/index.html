@@ -23,21 +23,29 @@
             </div>
         </div>
     </main>
+    <footer>
+        <button class="logout-btn" onclick="logout()">Cerrar Sesión</button>
+    </footer>
     <script>
         function openLink(action) {
             let url = '';
             switch(action) {
                 case 'gps':
-                    url = 'https://maps.app.goo.gl/KNqvyXLe3JJ3zPLy7';
+                    url = 'http://proxy19.rt3.io:35859/worldmap';
                     break;
                 case 'motor':
-                    url = 'https://link-to-motor-control.com';
+                    url = 'http://proxy19.rt3.io:35859/ui';
                     break;
                 case 'cameras':
                     url = 'http://192.168.1.10';
                     break;
             }
             window.open(url, '_blank');
+        }
+
+        function logout() {
+            // Aquí puedes añadir código para manejar el cierre de sesión, por ejemplo, eliminar tokens, cookies, etc.
+            window.location.href = 'login.html'; // Redirigir a la página de inicio de sesión
         }
     </script>
 </body>

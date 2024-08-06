@@ -1,3 +1,5 @@
+/* Estilos generales */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -49,13 +51,13 @@ nav ul li a:hover {
 }
 
 .hero h1 {
-    font-size: 3em;
+    font-size: 5em;
     margin: 0.5em 0;
     animation: fadeIn 2s ease-in-out;
 }
 
 .hero p {
-    font-size: 1.2em;
+    font-size: 2.5em;
     margin: 0.2em 0;
     animation: fadeIn 2s ease-in-out;
 }
@@ -69,42 +71,48 @@ main {
     margin-top: 20px;
     background: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.info-section:hover {
-    transform: translateY(-10px);
 }
 
 .info-section h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
+    font-size: 2.5em; /* Tamaño inicial del texto */
     color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, color 0.3s ease; /* Transición para el tamaño y color */
+}
+
+.info-section h2:hover {
+    transform: scale(1.1); /* Aumenta el tamaño ligeramente */
+    color: #003366; /* Azul oscuro al pasar el mouse */
 }
 
 .info-section .content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around; /* Espaciado uniforme */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en dispositivos más pequeños */
 }
 
 .info-section .text {
     flex: 1;
     margin: 0 20px;
+    text-align: justify; /* Justificar el texto */
 }
 
 .info-section .image {
     flex: 1;
+    max-width: 100%;
 }
 
 .info-section p {
     font-size: 1.2em;
     margin: 0 20px;
     color: #666;
+    text-align: justify; /* Justificar el texto */
 }
 
 .info-section img {
-    max-width: 100%;
+    max-width: 120%; /* Aumentar el tamaño máximo de la imagen */
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -119,6 +127,7 @@ main {
     flex-direction: row-reverse;
 }
 
+
 footer {
     background-color: #333;
     color: #fff;
@@ -127,6 +136,90 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+/* Estilos para la sección de servicios */
+.services-section {
+    padding: 40px 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centrar el texto */
+}
+
+.services-section h2 {
+    font-size: 2.5em; /* Tamaño inicial del texto */
+    color: #333;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, color 0.3s ease; /* Transición para el tamaño y color */
+}
+
+.services-section h2:hover {
+    transform: scale(1.1); /* Aumenta el tamaño ligeramente */
+    color: #003366; /* Azul oscuro al pasar el mouse */
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.service-item {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    border-color: #003366; /* Azul oscuro */
+}
+
+.service-icon {
+    margin-bottom: 15px;
+}
+
+.service-icon.icon1, .service-icon.icon2, .service-icon.icon3, .service-icon.icon4, .service-icon.icon5 {
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    margin: 0 auto 10px auto;
+}
+
+.service-icon.icon1 {
+    background-image: url('img/camion.png');
+}
+
+.service-icon.icon2 {
+    background-image: url('img/carga.png');
+}
+
+.service-icon.icon3 {
+    background-image: url('img/envase.png');
+}
+
+.service-icon.icon4 {
+    background-image: url('img/camion-de-reparto.png');
+}
+
+.service-icon.icon5 {
+    background-image: url('img/proteccion.png');
+}
+
+.service-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.service-item p {
+    font-size: 1em;
+    color: #666;
 }
 
 /* Animations */
@@ -138,3 +231,83 @@ footer {
         opacity: 1;
     }
 }
+
+/* Estilos para la sección de contacto */
+#contact {
+    padding: 40px 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centrar el texto */
+}
+
+#contact h2 {
+    font-size: 2.5em; /* Tamaño inicial del texto */
+    color: #333;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, color 0.3s ease; /* Transición para el tamaño y color */
+}
+
+#contact h2:hover {
+    transform: scale(1.1); /* Aumenta el tamaño ligeramente */
+    color: #003366; /* Azul oscuro al pasar el mouse */
+}
+
+.contact-details {
+    display: block; /* Cambiar a block para que los elementos se apilen verticalmente */
+    font-size: 1.2em;
+    color: #666;
+}
+
+.contact-details p {
+    margin: 20px 0; /* Espaciado entre los elementos de contacto */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrar los elementos horizontalmente */
+    gap: 10px;
+}
+
+.contact-details p .icon {
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+}
+
+.contact-details .icon-address {
+    background-image: url('img/address-icon.png');
+}
+
+.contact-details .icon-phone {
+    background-image: url('img/phone-icon.png');
+}
+
+.contact-details .icon-email {
+    background-image: url('img/email-icon.png');
+}
+
+.contact-details a {
+    color: #ff6347;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: #003366; /* Azul oscuro al pasar el mouse */
+}
+
+.image {
+    flex: 1;
+    text-align: center;
+}
+
+.image img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.image img:hover {
+    transform: scale(1.05);
+}
+
