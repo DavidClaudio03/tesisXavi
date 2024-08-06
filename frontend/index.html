@@ -3,50 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acciones Inteligentes</title>
-    <link rel="stylesheet" href="stylesindex.css">
+    <title>TESIS</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="login.html">Acciones Inteligentes</a></li>
+                <li><a href="#about-us">Sobre Nosotros</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="hero">
+        <h1>R&R TRASLOGIC S.A</h1>
+        <p>Rastreo de Transporte Eficiente</p>
+        <p>Seguridad y Control en Cada Movimiento</p>
+    </div>
     <main>
-        <div class="services-container">
-            <div class="service">
-                <img src="img/GPS.png" alt="GPS">
-                <button class="action-btn" onclick="openLink('gps')">GPS</button>
+        <section id="about-us" class="info-section">
+            <h2>Sobre Nosotros</h2>
+            <div class="content">
+                <div class="text">
+                    <p>R&R-TRANSLOGIC S.A. se fundó con el firme propósito de satisfacer las crecientes necesidades de transporte de carga pesada a nivel nacional. Desde nuestras oficinas en Ecuador, nos comprometemos a ofrecer servicios de transporte que sean tanto eficientes como innovadores. Contamos con un equipo de profesionales altamente capacitados que trabajan en conjunto para brindar soluciones logísticas personalizadas a nuestros clientes. Además, incorporamos las últimas tecnologías en nuestros procesos operativos, lo que nos permite mejorar continuamente la eficiencia y la eficacia de nuestros servicios. En R&R-TRANSLOGIC S.A. </p>
+                </div>
+                <div class="image">
+                    <img src="img/sobre_nosotros.png" alt="Sobre Nosotros">
+                </div>
             </div>
-            <div class="service">
-                <img src="img/motor.png" alt="Motor Control">
-                <button class="action-btn" onclick="openLink('motor')">Control de Motor</button>
+        </section>
+        <section id="services" class="services-section">
+            <h2>Servicios</h2>
+            <div class="service-container">
+                <div class="service-item">
+                        <div class="service-icon icon1"></div>
+                    </a>
+                    <h3>Transporte de carga FCL & LCL</h3>
+                    <p>Servicio de transporte de carga pesada por carretera, en camiones sencillos desde 5 ton. hasta tracto camiones tipo tráileres con semirremolque de 3 ejes, en todas sus modalidades.</p>
+                </div>
+                <div class="service-item">
+                        <div class="service-icon icon2"></div>
+                    </a>
+                    <h3>Alto cubicaje & volumen</h3>
+                    <p>Transporte de carga en equipos de alto cubicaje y volumen. (Camas altas, camas bajas de rampas e hidráulicas, caravanas, furgones graneleros, plataformas extensibles, chasis con generador para contenedores refrigerados).</p>
+                </div>
+                <div class="service-item">
+                        <div class="service-icon icon3"></div>
+                    </a>
+                    <h3>Carga especial</h3>
+                    <p>Carga general, extra dimensionada, extra pesada, maquinaria y equipo caminero con módulos de hasta 15 líneas.</p>
+                </div>
+                <div class="service-item">
+                        <div class="service-icon icon4"></div>
+                    </a>
+                    <h3>Consolidación & desconsolidación</h3>
+                    <p>Con equipos hidráulicos (montacargas hasta 15tn, grúas telescópicas 200tn).</p>
+                </div>
+                <div class="service-item">
+                        <div class="service-icon icon5"></div>
+                    </a>
+                    <h3>Candado satelital</h3>
+                    <p>Servicio de candado satelital para contenedores, gestión de custodia armada, equipos hidráulicos para consolidación y desconsolidación de cargas.</p>
+                </div>
             </div>
-            <div class="service">
-                <img src="img/camara.png" alt="Cámaras de Seguridad">
-                <button class="action-btn" onclick="openLink('cameras')">Cámaras de Seguridad</button>
+        </section>
+        <section id="contact" class="info-section">
+            <h2>Contacto</h2>
+            <div class="content">
+                <div class="contact-details">
+                    <p><strong>Dirección:</strong> AMBATO - ECUADOR</p>
+                    <p><strong>Teléfono:</strong> +593 99 992 6702</p>
+                    <p><strong>Correo electrónico:</strong> <a href="xavierjefer@gmail.com">xavierjefer@gmail.com</a></p>
+                </div>
+                <div class="image">
+                    <img src="img/contactos.png" alt="Contacto">
+                </div>
             </div>
-        </div>
+        </section>        
     </main>
     <footer>
-        <button class="logout-btn" onclick="logout()">Cerrar Sesión</button>
+        &copy; 2024 R&R TRASLOGIC S.A. Todos los derechos reservados. Power by GXG.
     </footer>
-    <script>
-        function openLink(action) {
-            let url = '';
-            switch(action) {
-                case 'gps':
-                    url = 'http://proxy19.rt3.io:35859/worldmap';
-                    break;
-                case 'motor':
-                    url = 'http://proxy19.rt3.io:35859/ui';
-                    break;
-                case 'cameras':
-                    url = 'http://192.168.1.10';
-                    break;
-            }
-            window.open(url, '_blank');
-        }
-
-        function logout() {
-            // Aquí puedes añadir código para manejar el cierre de sesión, por ejemplo, eliminar tokens, cookies, etc.
-            window.location.href = 'login.html'; // Redirigir a la página de inicio de sesión
-        }
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
